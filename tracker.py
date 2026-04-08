@@ -8,7 +8,7 @@ Trims entries older than 10 minutes to keep the file small.
 from pynput import keyboard
 import time, pathlib
 
-LOG = pathlib.Path.home() / ".local/share/powerbottom/wpm.log"
+LOG = pathlib.Path.home() / ".local/share/thundergun/wpm.log"
 LOG.parent.mkdir(parents=True, exist_ok=True)
 
 WORD_KEYS = {keyboard.Key.space, keyboard.Key.enter, keyboard.Key.tab}
