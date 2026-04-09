@@ -77,19 +77,21 @@ export const render = ({ output }) => {
         }
         .reset {
           position: absolute;
-          top: 4px;
-          right: 6px;
+          top: 5px;
+          right: 7px;
           background: none;
           border: none;
-          color: #ddd;
-          font-size: 11px;
+          color: #c0c0c0;
+          font-size: 12px;
           cursor: pointer;
-          padding: 0;
+          padding: 2px 3px;
           line-height: 1;
-          transition: color 0.15s;
+          border-radius: 4px;
+          transition: color 0.15s, background 0.15s;
         }
         .reset:hover {
-          color: #aaa;
+          color: #666;
+          background: #f0f0f0;
         }
       `}</style>
     </div>

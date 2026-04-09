@@ -1,0 +1,7 @@
+{
+  "name": "Thundergun",
+  "description": "Real-time typing speed monitor. Displays RAW (1-min rolling average), BURST (last 10s), and PEAK WPM on your desktop. Updated every 2 seconds. Requires Python 3 and pynput.",
+  "author": "Patrick Maloney",
+  "authorGithubHandle": "prmaloney",
+  "tags": ["typing", "productivity", "wpm", "stats"]
+}
