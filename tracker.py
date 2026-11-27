@@ -14,7 +14,7 @@ LOG.parent.mkdir(parents=True, exist_ok=True)
 WORD_KEYS = {keyboard.Key.space, keyboard.Key.enter, keyboard.Key.tab}
 
 def trim(lines):
-    cutoff = time.time() - 600
+    cutoff = time.time() - 120
     return [l for l in lines if l and float(l.lstrip("W")) > cutoff]
 
 def on_press(key):

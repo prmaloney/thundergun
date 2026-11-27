@@ -3,7 +3,7 @@ export const command = `/opt/homebrew/bin/python3 /Users/prmaloney/personal/thun
 export const refreshFrequency = 2000
 
 export const className = `
-  top: 340px;
+  top: 372px;
   right: 15px;
 `
 
@@ -36,62 +36,81 @@ export const render = ({ output }) => {
 
       <style>{`
         .container {
-          background: white;
-          border-radius: 16px;
-          padding: 12px 18px;
-          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+          border-radius: 26px;
+          padding: 18px 26px 16px;
+          isolation: isolate;
+          font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", sans-serif;
           display: flex;
           align-items: center;
-          gap: 14px;
+          gap: 22px;
           position: relative;
+        }
+        .container::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          border-radius: inherit;
+          background: linear-gradient(
+            145deg,
+            rgba(60, 60, 62, 0.55),
+            rgba(20, 20, 22, 0.6)
+          );
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow:
+            0 8px 28px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
         .stat {
           display: flex;
-          align-items: baseline;
-          gap: 5px;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
         }
         .number {
-          font-size: 28px;
-          font-weight: 700;
-          color: #1a1a1a;
+          font-size: 38px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.92);
           line-height: 1;
+          font-variant-numeric: tabular-nums;
+          width: 3ch;
+          text-align: center;
         }
         .burst {
-          color: #3b82f6;
+          color: rgba(255, 255, 255, 0.92);
         }
         .peak {
-          color: #f59e0b;
+          color: rgba(255, 255, 255, 0.92);
         }
         .label {
           font-size: 11px;
-          font-weight: 500;
-          color: #999;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.5);
           text-transform: uppercase;
-          letter-spacing: 0.06em;
+          letter-spacing: 0.1em;
         }
         .divider {
           width: 1px;
-          height: 28px;
-          background: #e5e5e5;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.14);
         }
         .reset {
           position: absolute;
-          top: 5px;
-          right: 7px;
+          top: 8px;
+          right: 12px;
           background: none;
           border: none;
-          color: #c0c0c0;
+          color: rgba(255, 255, 255, 0.3);
           font-size: 12px;
           cursor: pointer;
-          padding: 2px 3px;
+          padding: 2px 4px;
           line-height: 1;
-          border-radius: 4px;
+          border-radius: 6px;
           transition: color 0.15s, background 0.15s;
         }
         .reset:hover {
-          color: #666;
-          background: #f0f0f0;
+          color: rgba(255, 255, 255, 0.85);
+          background: rgba(255, 255, 255, 0.12);
         }
       `}</style>
     </div>
